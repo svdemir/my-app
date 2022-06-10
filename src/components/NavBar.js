@@ -46,7 +46,7 @@ function NavBar({ user }) {
                                 <Link class="nav-link text-danger" to={"/contact"}>İletişim</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to={"/admin"}>Admin</Link>
+                                <Link class="nav-link text-danger" to={"/admin"}>Admin</Link>
                             </li>
                             <li class="nav-item">
                                 <Link class="nav-link" to={"/login"}>Login</Link>
