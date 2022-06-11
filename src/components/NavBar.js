@@ -52,13 +52,18 @@ function NavBar({ user }) {
                                 <Link class="nav-link text-danger" to={"/admin"}>Admin</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to={"/login"}>Login</Link>
+                                {
+                                    getToken() ?
+                                        <div>
+                                        </div> : <div><Link class=" btn btn-info ml-7" to={"/login"}>Login</Link></div>
+                                }
+
                             </li>
                             <li class="nav-item">
                                 {
                                     getToken() ?
                                         <div>
-                                            <button class="btn btn-warning ml-5 mt-1 btn-md" onClick={() => { handleLogOut() }}>Sign Out</button>
+                                            <button class="btn btn-warning ml-5 btn-md" onClick={() => { handleLogOut() }}>Sign Out</button>
                                         </div> : <div></div>
                                 }
                             </li>
